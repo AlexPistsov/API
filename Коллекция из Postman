@@ -1,0 +1,251 @@
+{
+	"info": {
+		"_postman_id": "358a8964-f5f6-422b-8cbe-098b8b5cbf99",
+		"name": "Test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21498371"
+	},
+	"item": [
+		{
+			"name": "Create user",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "app-id",
+						"value": "62af54f41e9884468cb52035",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"title\": \"mr\",\r\n\"firstName\": \"Alexey\",\r\n\"lastName\": \"Pistsov\",\r\n\"gender\": \"male\",\r\n\"email\": \"alexpistsov1@yandex.ru\",\r\n\"dateOfBirth\":\"01/01/1990\",\r\n\"phone\": \"89504555222\",\r\n\"picture\": \"www.yandex.ru\",\r\n\"location\":\r\n{\r\n\"street\": \"Lenina\",\r\n\"city\": \"Perm\",\r\n\"state\": \"Permskiy\",\r\n\"country\": \"Russia\",\r\n\"timezone\": \"+ 5:00\"}\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://dummyapi.io/data/v1/user/create",
+					"protocol": "https",
+					"host": [
+						"dummyapi",
+						"io"
+					],
+					"path": [
+						"data",
+						"v1",
+						"user",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create user with invalid firstname and last name",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "app-id",
+						"value": "62af54f41e9884468cb52035",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"title\": \"mr\",\r\n\"firstName\": \"Alexey\",\r\n\"lastName\": \"Pistsov\",\r\n\"gender\": \"male\",\r\n\"email\": \"alexpistsov1@yandex.ru\",\r\n\"dateOfBirth\":\"01/01/1990\",\r\n\"phone\": \"89504555222\",\r\n\"picture\": \"www.yandex.ru\",\r\n\"location\":\r\n{\r\n\"street\": \"Lenina\",\r\n\"city\": \"Perm\",\r\n\"state\": \"Permskiy\",\r\n\"country\": \"Russia\",\r\n\"timezone\": \"+ 5:00\"}\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://dummyapi.io/data/v1/user/create",
+					"protocol": "https",
+					"host": [
+						"dummyapi",
+						"io"
+					],
+					"path": [
+						"data",
+						"v1",
+						"user",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get user by ID",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "app-id",
+						"value": "62af54f41e9884468cb52035",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://dummyapi.io/data/v1/user/62b0a74e3864b368367dfacc",
+					"protocol": "https",
+					"host": [
+						"dummyapi",
+						"io"
+					],
+					"path": [
+						"data",
+						"v1",
+						"user",
+						"62b0a74e3864b368367dfacc"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Users info",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "app-id",
+						"value": "62af54f41e9884468cb52035",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://dummyapi.io/data/v1/user?page=1&limit=10",
+					"protocol": "https",
+					"host": [
+						"dummyapi",
+						"io"
+					],
+					"path": [
+						"data",
+						"v1",
+						"user"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "limit",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update User info",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "app-id",
+						"value": "62af54f41e9884468cb52035",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"title\": \"mr\",\r\n\"firstName\": \"Alexey000\",\r\n\"lastName\": \"Pistsov000\",\r\n\"gender\": \"male\",\r\n\"email\": \"alexpistsov2@yandex.ru\",\r\n\"dateOfBirth\":\"01/01/1990\",\r\n\"phone\": \"89504555222\",\r\n\"picture\": \"www.yandex.ru\",\r\n\"location\":\r\n{\r\n\"street\": \"Lenina\",\r\n\"city\": \"Perm\",\r\n\"state\": \"Permskiy\",\r\n\"country\": \"Russia\",\r\n\"timezone\": \"+ 5:00\"}\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://dummyapi.io/data/v1/user/62b0a74e3864b368367dfacc",
+					"protocol": "https",
+					"host": [
+						"dummyapi",
+						"io"
+					],
+					"path": [
+						"data",
+						"v1",
+						"user",
+						"62b0a74e3864b368367dfacc"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update User info 2",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "app-id",
+						"value": "62af54f41e9884468cb52035",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"title\": \"mr\",\r\n\"firstName\": \"Alexey000\",\r\n\"lastName\": \"Pistsov000\",\r\n\"gender\": \"male\",\r\n\"email\": \"alexpistsov2@yandex.ru\",\r\n\"dateOfBirth\":\"01/01/1990\",\r\n\"phone\": \"89504555222\",\r\n\"picture\": \"www.yandex.ru\",\r\n\"location\":\r\n{\r\n\"street\": \"Lenina\",\r\n\"city\": \"Perm\",\r\n\"state\": \"Permskiy\",\r\n\"country\": \"Russia\",\r\n\"timezone\": \"+ 5:00\"}\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://dummyapi.io/data/v1/user/62b0a74e3864b368367dfacc",
+					"protocol": "https",
+					"host": [
+						"dummyapi",
+						"io"
+					],
+					"path": [
+						"data",
+						"v1",
+						"user",
+						"62b0a74e3864b368367dfacc"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete User",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "app-id",
+						"value": "62af54f41e9884468cb52035",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://dummyapi.io/data/v1/user/62b0a74e3864b368367dfacc",
+					"protocol": "https",
+					"host": [
+						"dummyapi",
+						"io"
+					],
+					"path": [
+						"data",
+						"v1",
+						"user",
+						"62b0a74e3864b368367dfacc"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
